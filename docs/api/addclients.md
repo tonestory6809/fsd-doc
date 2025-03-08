@@ -1,42 +1,53 @@
 # Adding and removing clients #
 
-While the presence (or absence) of client update packets (see "Positon updates" under "Requesting and sending information") will signify the presence (or lack thereof) of a client, the server will also send a special packet signaling the addition/removal of said client, whether this is due to client disconnecting or falling out of visibility range.
-
-The following commands are also used to login/logoff the client itself.
-
-
+The following commands are used to login/logoff itself by the client.
 
 ## Adding clients ##
-
-It is unknown as to what `100` represents, but it appears that all clients share the same value.
 
 ### ATC ###
 
 ```
-#AA(callsign):SERVER:(real name):(network ID)::(rating):(protocol version)
+#AA(callsign):(unused):(real name):(network ID):(password):(rating):(protocol version)
 ```
+
+| Paramater        | Type    | Explaination                                         |
+| ---------------- | ------- | ---------------------------------------------------- |
+| callsign         | string  | See [Definitions](../intro/defs.md#definitions)      |
+| unused           | any     | Unused paramater, ignored by FSD 4, usually `SERVER` |
+| real name        | string  | Real name of the user                                |
+| network ID       | string  | See [Definitions](../intro/defs.md#definitions)      |
+| password         | string  | Plain password                                       |
+| rating           | integer | See [ATC ratings](../intro/defs.md#atc-ratings)      |
+| protocol version | integer | See [Definitions](../intro/defs.md#definitions)      |
 
 ### Pilots ###
 
 ```
-#AP(callsign):SERVER:(network ID)::1:(protocol version):(rating):(real name ICAO)
+#AP(callsign):SERVER:(network ID):(password):(rating):(protocol version):(simtype):(real name)
 ```
 
-
+| Paramater        | Type    | Explaination                                                    |
+| ---------------- | ------- | --------------------------------------------------------------- |
+| callsign         | string  | See [Definitions](../intro/defs.md#definitions)                 |
+| unused           | any     | Unused paramater, ignored by FSD 4, usually `SERVER`            |
+| network ID       | string  | See [Definitions](../intro/defs.md#definitions)                 |
+| password         | string  | Plain password                                                  |
+| rating           | integer | See [Pilot ratings](../intro/defs.md#pilot-ratings), usually 1  |
+| protocol version | integer | See [Definitions](../intro/defs.md#definitions)                 |
+| simtype          | integer | Unknown, marked as `simtype` in FSD 4, usually 10               |
+| real name        | string  | Real name of the user                                           |
 
 ## Removing clients ##
 
 ### ATC ###
 
 ```
-#DA(callsign):(network ID)
+#DA(callsign)
 ```
 
 ### Pilots ###
 
 ```
-#DP(callsign):(network ID)
+#DP(callsign)
 ```
-
-
 
