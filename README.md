@@ -1,3 +1,5 @@
+I'm still writing so commit message is a mess. Will edit later
+
 # FSD documentation #
 
 An unofficial attempt at documenting the implementations of FSD used today. IVAO and VATSIM happen to be the most common ones, though there are likely others.
