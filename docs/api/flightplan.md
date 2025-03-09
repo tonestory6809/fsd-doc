@@ -6,7 +6,7 @@ Used by the client to file a flight plan.
 $FP(callsign):(unused):(type):(aircraft):(tascruise):(depairport):(deptime):(actdeptime):(alt):(destairport):(hrsenroute):(minenroute):(hrsfuel):(minfuel):(altairport):(remarks):(route)
 ```
 
-| Paramater   | Type    | Explaination                                                                                                                                   |
+| Placeholder | type    | details                                                                                                                                        |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | callsign    | string  | See [Definitions](../intro/defs.md#definitions)                                                                                                |
 | unused      | any     | Unused paramater, ignored by FSD 4, usually `SERVER`                                                                                           |
@@ -30,8 +30,8 @@ $FP(callsign):(unused):(type):(aircraft):(tascruise):(depairport):(deptime):(act
 Reference: [swift-project/pilotclient](https://github.com/swift-project/pilotclient/blob/21bda3b3224e5b822218a742eca22b4002970c09/src/misc/aviation/flightplanaircraftinfo.cpp#L243C92-L243C105)
 `(type)(designator)/(equipment)`, e.g. `H/A320/L`
 
-| Paramater  | Explaination                                                                                                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | `H/` for Heavy and `J/` for Super, else empty                                                                                                                                                |
-| designator | [ICAO Type Designator](https://en.wikipedia.org/wiki/List_of_aircraft_type_designators) e.g. `A320`, `B738`                                                                                  |
-| equipment  | See [swift-project implementation](https://github.com/swift-project/pilotclient/blob/21bda3b3224e5b822218a742eca22b4002970c09/src/misc/aviation/flightplanaircraftinfo.cpp#L243C92-L243C105) |
+| Placeholder | details                                                                                                                                                                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type        | `H/` for Heavy and `J/` for Super, else empty                                                                                                                                                  |
+| designator  | [ICAO Type Designator](https://en.wikipedia.org/wiki/List_of_aircraft_type_designators) e.g. `A320`, `B738`                                                                                    |
+| equipment   | See [swift-project's implementation](https://github.com/swift-project/pilotclient/blob/21bda3b3224e5b822218a742eca22b4002970c09/src/misc/aviation/flightplanaircraftinfo.cpp#L243C92-L243C105) |

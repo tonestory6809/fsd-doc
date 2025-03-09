@@ -10,7 +10,7 @@
 | Protocol version                | The version of the FSD protocol being used by the client. FSD uses 9.                                                                                                                                      |
 | Rating                          | The ATC or pilot rating, as assigned by the network. This is stored as an integer; the lowest rating is `1`. Examples: S1/C2/C3, AS3/ADC, FS3/SPP, etc.                                                    |
 | Server                          | A FSD server.                                                                                                                                                                                              |
-| Packet                          | A formatted unit of data sent over an FSD network, splitted by semicolons and terminated by `\r\n`. Example: `#??FOO:BAR:1234\r\n`                                                                         |
+| Packet                          | A formatted unit of data sent over an FSD network, see [Overview](../api/packet.md#overview)                                                                                                               |
 
 Placeholders are indicated using brackets; e.g. `(client)`.
 

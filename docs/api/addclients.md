@@ -10,7 +10,7 @@ The following commands are used to login/logoff itself by the client.
 #AA(callsign):(unused):(real name):(network ID):(password):(rating):(protocol version)
 ```
 
-| Paramater        | Type    | Explaination                                         |
+| Placeholder      | type    | details                                              |
 | ---------------- | ------- | ---------------------------------------------------- |
 | callsign         | string  | See [Definitions](../intro/defs.md#definitions)      |
 | unused           | any     | Unused paramater, ignored by FSD 4, usually `SERVER` |
@@ -26,7 +26,7 @@ The following commands are used to login/logoff itself by the client.
 #AP(callsign):SERVER:(network ID):(password):(rating):(protocol version):(simtype):(real name)
 ```
 
-| Paramater        | Type    | Explaination                                                   |
+| Placeholder      | type    | details                                                        |
 | ---------------- | ------- | -------------------------------------------------------------- |
 | callsign         | string  | See [Definitions](../intro/defs.md#definitions)                |
 | unused           | any     | Unused paramater, ignored by FSD 4, usually `SERVER`           |

@@ -1,13 +1,17 @@
 # Overview #
 
-Most packets roughly follow the format below:
+We call byte strings delimited by semicolons and terminated by `\r\n` as packets, or PDUs in swift-project.
+Example: `#??FOO:BAR:1234\r\n`
+Here, we call `#??` as the command (or PDU identifier in swift-project), `FOO`, `BAR`, `1234` as parts (or tokens in swift-project).
 
+Most packets follow the format below:
 ```
-(command):(destination):(source):(data)\r\n
+(command)(source):(destination):(data)\r\n
 ```
-
+In FSD4, most packets also allows more parts than required and they'll be ignored.
 
 ## `command` ##
+
 The name of the command. See each section for the commands.
 
 Each command is prefixed with one of the following:
@@ -18,19 +22,18 @@ Each command is prefixed with one of the following:
 | `#`    | Adding/removing clients, text messages |
 | `%`    | ATC update                             |
 | `@`    | Aircraft update                        |
+See TOC for full list of commands.
 
 
 ## `destination` ##
 
 The destination of the packet. This may be any one of the following. Case does not seem to matter:
 
-* `DATA`
 * `SERVER`
 * `FP`
 * The callsign of an online station / aircraft
 
-The first three appear to be VATSIM-specific.
-
+Some packets allows more broadcast destinations.
 
 ## `source` ##
 
