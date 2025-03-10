@@ -11,7 +11,7 @@ $FP(callsign):(unused):(type):(aircraft):(tascruise):(depairport):(deptime):(act
 | callsign    | string  | See [Definitions](../intro/defs.md#definitions)                                                                                                |
 | unused      | any     | Unused paramater, ignored by FSD 4, usually `SERVER`                                                                                           |
 | type        | string  | `V` for VFR or `I` for IFR                                                                                                                     |
-| aircraft    | string  | See [Aircraft and equipment](#aircraft-and-equipment)                                                                                          |
+| aircraft    | string  | See [Aircraft and equipment](#aircraft-and-equipment)                                                                                         |
 | tascruise   | integer | TAS during cruise                                                                                                                              |
 | depairport  | string  | Departure airport ICAO                                                                                                                         |
 | deptime     | integer | Estimated departure time                                                                                                                       |
@@ -25,6 +25,7 @@ $FP(callsign):(unused):(type):(aircraft):(tascruise):(depairport):(deptime):(act
 | altairport  | string  | Alternative airport                                                                                                                            |
 | remarks     | string  | Remarks delimited by slash, perhaps [this](https://www.reddit.com/r/VATSIM/comments/735lis/what_do_i_expect_to_see_in_your_flight_plan/) helps |
 | route       | string  | Air route e.g. `HON UL10 CASEL`                                                                                                                |
+
 ## Aircraft and equipment
 
 Reference: [swift-project/pilotclient](https://github.com/swift-project/pilotclient/blob/21bda3b3224e5b822218a742eca22b4002970c09/src/misc/aviation/flightplanaircraftinfo.cpp#L243C92-L243C105)
